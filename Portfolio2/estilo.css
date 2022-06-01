@@ -1,0 +1,180 @@
+*{ 
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*-------------------------------------------HEADER------------------------------------------------*/
+
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.titulo-principal{
+    color: #9b9b9b;
+    font-size: 35px;
+}
+.subtitulo , .subtitulo-habilidades{
+    color: #9b9b9b;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+.encabezado{
+    height: 100vh;
+    background-image: url(./img/jefferson-santos-9SoCnyQmkzI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+.encabezado .contenedor{
+    padding: 0;
+}
+.menu-nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+}
+.nav-menu{
+    text-decoration: none;
+    color: #9b9b9b;
+    margin-right: 20px;
+}
+.contenedor-encabezado{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px
+}
+.texto1{
+    width: 80%;
+    margin-bottom: 80px;
+    font-family: 'Playfair Display', serif;
+}
+
+/*------------------------------------------CUERPO-------------------------------------------------*/
+
+.cuerpo-contenedor{
+    padding-top: 0;
+    text-align: center;
+}
+.presentacion-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.p-presentacion{
+    width: 80%;
+    margin: 0 auto;
+}
+.habilidades{
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 60px;
+    margin-top: 80px;
+}
+.img-habilidades1{
+    text-align: center;
+}
+.img-habilidades2{
+    text-align: left;
+}
+.img-habilidades{
+    max-width: 80%;
+}
+#H{
+    margin: 10px 100px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: justify;
+}
+/*---------------------------------------FOOTER----------------------------------------------------*/
+.final{
+    background-image: url(./img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    background-position: center;
+    position: relative;
+}
+.iconos{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #9b9b9b;
+    text-align: end;
+}
+#IC{
+      color: #9b9b9b;
+      font-size: 30px;
+      text-decoration: none;
+      padding-top: 45px;
+      margin: 10px 52px;
+  }  
+  .wave2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px
+}
+.nav-menu2{
+    text-decoration: none;
+    color: #847F7F;
+    margin-right: 20px; 
+    font-size: 30px;
+    padding-top: 1050px;
+    text-align: left;
+
+}
+form{
+    width: 450px;
+    margin:10px 50px;
+    background: rgba(0,0,0,0.4);
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;    
+}
+h3{
+    color: #9b9b9b;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+input, textarea{
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+textarea{
+    min-width: 95%;
+    min-height: 100px;
+    max-height: 100px;
+}
+#boton{
+    background: #9b9b9b;
+    color: #f3f3f3;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}

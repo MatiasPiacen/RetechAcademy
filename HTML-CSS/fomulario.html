@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <section>
+        <h3>Formulario de Registro</h3>
+        <form action="">
+            <label for="Nombre">Ingrese su Nombre
+                <input type="text" id="Nombre">
+            </label><br><br>
+            <label for="Apellido">Ingrese su Apellido
+                <input type="text" id="Aprellido">
+            </label><br><br>
+            <label for="Correo">Ingrese su Correo
+                <input type="email" id="Correo">
+            </label><br><br>
+            <label>¿Que habitación prefiere?<br>
+                <input type="checkbox" name="Standar"> Standar <br>
+                <input type="checkbox" name="Classic"> Classic <br>
+                <input type="checkbox" name="Premium"> Premium <br>
+            </label><br><br>
+            <label>¿Desea servicio a la habitación?<br>
+                <input type="radio" name="habitación" value="Si"> Si <br>
+                <input type="radio" name="habitación" value="No"> No <br>
+            </label><br>
+            <label for="País"> Selecciona el pais de procedencia
+                <select name="país-origen" id="País">
+                    <option value="" disabled selected></option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Europa">Europa</option>
+                </select>
+            </label><br><br>
+            <label> Escriba información extra <br>
+                <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+            </label><br><br>
+            <label>
+                <button type="submit">Enviar</button>
+                <button type="delete"> Borrar</button>
+            </label>
+        </form>
+    </section>
+</body>
+</html>

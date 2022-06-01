@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@100&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#1f1f1f;
+    --second-color:#6C6765;
+}
+body{
+    margin: 0%;
+    font-family: 'Koulen', cursive;
+    background-color: var(--primary-color)
+}
+header{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(17,18,18);
+    background: linear-gradient(90deg, rgba(17,18,18,1) 29%, rgba(58,59,59,1) 100%);
+
+}
+#titulo{
+    color: #D11414;
+    padding-left: 10px;
+}
+form{
+    padding-left: 10px;
+    padding-top: 33px; 
+    color: black;
+}
+#input{
+    background-color: transparent;
+    border: 2px solid var(--second-color);
+    padding-top: 7PX;
+    padding-bottom: 7PX;
+    padding-left: 20PX;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffff
+}
+#input:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+}
+#input::placeholder{
+    color: #ffff;
+}
+#boton{
+    background-color: transparent;
+    color: #ffff;
+    border: none;
+    font-size: 18px;
+}
+#botonX{
+    background-color: transparent;
+    color: #ffff;
+    border: none;
+    font-size: 18px;
+}
+#boton:hover{
+    color: #D11414;
+}
+#botonX:hover{
+    color: #D11414;
+}
+.pelicula img{
+    width: 100%;
+}
+.pelicula{
+    width: 300px;
+    margin: 30px;
+    border-radius: 4px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,1);
+    background-color: #131313;
+    position: relative;
+    overflow: hidden    ;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+#info{
+    display: flexbox;
+    color: #ffffff;
+    margin: 0 12px;
+}
+#info h3{
+    margin-top: 0;
+}
+#descripcion{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--second-color);
+    margin:0 10px ;
+    text-align: center;
+    max-height: 100%;
+    padding: 16px;
+    transform: translateY(101%);
+    transition: transform 0.5s;
+}
+.pelicula:hover #descripcion{
+    transform: translateY(0);
+}
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: var(--primary-color);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: linear-gradient(90deg, rgba(17,18,18,1) 29%, rgba(58,59,59,1) 100%);
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+    background: #D11414;
+}

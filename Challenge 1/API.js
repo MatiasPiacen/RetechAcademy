@@ -1,4 +1,5 @@
 ///////////////////////////////////API Funcionando///////////////////////////////////////////////
+let pagina = 1;
 const cargarPelis = async() => {
     try{ 
     const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=93df802a9e529fe0cfd6000a6d47254c&language=es-MX&page=${pagina}`);
@@ -42,7 +43,6 @@ const cargarPelis = async() => {
     }
 cargarPelis();
 /////////////////////////////////Botones/////////////////////////////////////////////////////////////
-let pagina = 1;
 const btnAnterior = document.getElementById('btnAnterior');
 const btnSiguiente = document.getElementById('btnSiguiente');
 
@@ -56,7 +56,6 @@ btnSiguiente.addEventListener('click', () => {
 btnAnterior.addEventListener('click', () => {
 	if(pagina > 1){
 		pagina -= 1;
-		cargarPelis( hub);
+		cargarPelis();
 	}
 });
-

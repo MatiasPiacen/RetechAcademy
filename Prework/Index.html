@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=divice-width, initial-scaled=1.0">
+<title>Programacion</title>
+<link rel="stylesheet" href="">
+<style>
+    body{
+        background-color: cyan;
+    }
+    h1{
+        color: crimson;
+    }
+    h2{
+        color: brown;
+    }
+    p{
+        color: black;
+        font-size: 17px;
+    }
+</style>
+    </head>
+    <body>
+        <h1>Bienvenido</h1>
+        <h2>1er Capitulo</h2>
+        <p><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error vel alias accusamus! Cum, libero facilis laudantium ratione dolor placeat numquam quaerat repellat veritatis, voluptate inventore iste, suscipit eos. Illum, officiis.<b></p>
+        <p>Lorem ipsum dolor sit.</p>
+        <script>
+            var usuario = parseInt(prompt("¿Cual es tu peso?"));
+            var lugar = prompt("1 Luna - 2 Jupiter");
+            var gTierra = 9.8;
+            var gLuna = 1.6;
+            var gJupiter = 24.8;
+            var peso = parseInt(usuario);
+            var peso_final;
+            var nombre;
+            if (lugar == 1){
+                peso_final = peso * gLuna / gTierra;
+                nombre = "la Luna ";
+            }
+            else if (lugar == 2){
+                peso_final = peso * gJupiter / gTierra;
+                nombre = "Jupiter"
+            }
+            var peso_final = parseInt(peso_final); 
+            document.write ("Tu peso final en " + nombre + " es " + peso_final + "Kg");
+        </script>
+    </body>
+</html>

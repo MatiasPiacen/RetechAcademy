@@ -59,3 +59,21 @@ btnAnterior.addEventListener('click', () => {
 		cargarPelis();
 	}
 });
+///////////////////////////////////////BUSCADOR////////////////////////////////////////////////////
+function buscarPeliculas () {
+      const nombreDePelicula = document.getElementById("nombre-peliculas").value;
+      fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=af0e0a76ec3a39a7dc32e7f88e6e6968&language=es-MX&query=${nombreDePelicula}&page=1&,`,
+        {
+          method: "GET",
+          redirect: "follow",
+        }
+      )
+        .then((success) => success.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+ }

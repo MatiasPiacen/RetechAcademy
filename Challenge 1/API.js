@@ -77,3 +77,22 @@ function buscarPeliculas () {
           console.log(error);
         });
  }
+ let BotonSearch = document.querySelector("#boton");
+ let Botonclear = document.querySelector("#clear")
+ let inputPeliculas = document.querySelector("#nombre-peliculas");
+ let url;
+
+ BotonSearch.addEventListener("click",() =>{
+   defaultAll(main)
+   var nombre_pelicula = inputPeliculas.value;
+   url = `https://api.themoviedb.org/3/search/movie?api_key=af0e0a76ec3a39a7dc32e7f88e6e6968&language=en-US&query=${nombre_pelicula}&page=1&`;
+   buscarPeliculas(url, main)
+ })
+ Botonclear.addEventListener("click", () => { 
+    defaultAll(main) 
+    inputPeliculas.value = ""; 
+    popular() 
+})
+ function defaultAll(main) {
+    main.innerHTML = ""; }
+ 

@@ -1,10 +1,13 @@
 let pagina = 1;
-function dibujarTarjetasDePeliculas(peliculas) {
+window.onload = () => {
+  cargarPelis ();
+}
+function dibujarTarjetasDePeliculas(pelicula) {
  let misPeliculas = "";
- peliculas.forEach((pelicula) => {
+ pelicula.forEach((pelicula) => {
     misPeliculas += `
               <div class="pelicula">
-                  <img  class="img-pel" src="https://image.tmdb.org/t/p/w500/${peliculas.poster_path}" >
+                  <img  class="img-pel" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" >
                   <div id="info">
                       <h2 id="titulo-pel">${pelicula.title}</h2>
                       <h3 id="genero">${pelicula.genres_movies}</h3>
@@ -16,11 +19,11 @@ function dibujarTarjetasDePeliculas(peliculas) {
                       </div>
               </div>
           `;
-});
+})
 
 document.getElementById("main").innerHTML = misPeliculas;
 }
-
+///////////////////////////////////////API///////////////////////////////////////////////////////
 const cargarPelis = async () => {
   try {
     const respuesta = await fetch(
@@ -31,7 +34,7 @@ const cargarPelis = async () => {
 
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
-      dibujarTarjetasDePeliculas(datos.result)
+      dibujarTarjetasDePeliculas(datos.results)
     }
     //////////////Error por si no pongo el condicional del boton anterior////////////////////////////
     else if (respuesta.status === 401) {
@@ -72,7 +75,7 @@ function buscarPeliculas() {
   )
     .then((success) => success.json())
     .then((datos) => {
-       dibujarTarjetasDePeliculas(datos.result)
+       dibujarTarjetasDePeliculas(datos.results)
     })
     .catch((error) => {
       console.log(error);
@@ -96,4 +99,3 @@ function buscarPeliculas() {
 })
  function defaultAll(main) {
     main.innerHTML = ""; }
- 

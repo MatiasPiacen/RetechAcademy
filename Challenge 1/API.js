@@ -2,6 +2,7 @@ let pagina = 1;
 window.onload = () => {
   cargarPelis ();
 }
+////////////////////////////////////////////////TARJETAS////////////////////////////////////////////
 function dibujarTarjetasDePeliculas(pelicula) {
  let misPeliculas = "";
  pelicula.forEach((pelicula) => {
@@ -46,7 +47,7 @@ const cargarPelis = async () => {
     console.log(error);
   }
 };
-/////////////////////////////////Botones/////////////////////////////////////////////////////////////
+/////////////////////////////////BOTONES PARTE INFERIOR//////////////////////////////////////////////
 const btnAnterior = document.getElementById('btnAnterior');
 const btnSiguiente = document.getElementById('btnSiguiente');
 
@@ -81,8 +82,9 @@ function buscarPeliculas() {
       console.log(error);
     });
 } 
+//////////////////////////////////BOTONES PARTE SUPERIOR/////////////////////////////////////////////
  let BotonSearch = document.querySelector("#boton");
- let Botonclear = document.querySelector("#clear")
+ let Botonclear = document.querySelector("#botonX")
  let inputPeliculas = document.querySelector("#nombre-peliculas");
  let url;
 
@@ -95,7 +97,7 @@ function buscarPeliculas() {
  Botonclear.addEventListener("click", () => { 
     defaultAll(main) 
     inputPeliculas.value = ""; 
-    popular() 
+    cargarPelis() 
 })
- function defaultAll(main) {
+function defaultAll(main) {
     main.innerHTML = ""; }
